@@ -1,0 +1,73 @@
+﻿<Window x:Class="Nikolay.Kalkulator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nikolay"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#FFD1CCE5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель -->
+        <Grid Background="#FF928DC5" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="М и н е в р а" FontFamily="Yu Gothic Light" FontWeight="Bold" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10"/>
+            <!--<Button Content="История" x:Name="HystorBtn" Grid.Row="2" Width="112" Height="25" Margin="44,10,45,263" Click="HystorBtn_Click" />-->
+        </Grid>
+
+        <!-- Панель калькулятора -->
+        <Grid Grid.Column="1" Margin="24,10,24,52">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40.386"/>
+                <RowDefinition Height="31.537"/>
+                <RowDefinition Height="5.037"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="219"/>
+                <ColumnDefinition Width="Auto" MinWidth="43.77"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Количество комнат:" Grid.Row="0" Grid.Column="0" Margin="0,10,52,10"/>
+            <TextBox x:Name="komnatTextBox" Grid.Row="0" Grid.Column="1" Margin="0,10,-88,10"/>
+
+            <TextBlock Text="Количество этажей:" Grid.Row="1" Grid.Column="0" Margin="0,10,52,10"/>
+            <TextBox x:Name="etajeyTextBox" Grid.Row="1" Grid.Column="1" Margin="0,10,-88,10"/>
+
+            <TextBlock Text="Количество санузлов:" Grid.Row="2" Grid.Column="0" Margin="0,10,52,10"/>
+            <TextBox x:Name="sanuzlovTextBox" Grid.Row="2" Grid.Column="1" Margin="0,10,-88,10"/>
+
+            <TextBlock Text="Количество ванных:" Grid.Row="3" Grid.Column="0" Margin="0,10,52,10"/>
+            <TextBox x:Name="vannihTextBox" Grid.Row="3" Grid.Column="1" Margin="0,10,-88,10"/>
+
+            <TextBlock Text="Количество балконов:" Grid.Row="4" Grid.Column="0" Margin="0,10,52,10"/>
+            <TextBox x:Name="balkonovTextBox" Grid.Row="4" Grid.Column="1" Margin="0,10,-88,10"/>
+
+            <TextBlock Text="Примерная стоимость недвижимости:" Grid.Row="6" Margin="0,9,0,10"/>
+            <TextBox x:Name="stoimostTextBox" Grid.Row="6" IsReadOnly="True" Margin="0,10,-88,22" Grid.Column="1"/>
+        </Grid>
+        <Button Content="Рассчитать" x:Name="CalculateButton" HorizontalAlignment="Left" Click="CalculateButton_Click" VerticalAlignment="Top" Width="120" Height="25" Margin="403,344,0,0" Grid.Column="1"/>
+        <Button Content="Главная" x:Name="Mainn" HorizontalAlignment="Center" VerticalAlignment="Top" Width="112" Height="33" Click="Mainn_Click"  Margin="0,46,0,0"/>
+        <Button Content="Выйти" x:Name="btExit" HorizontalAlignment="Center" Margin="0,372,0,0" VerticalAlignment="Top" Width="112" Height="25" Click="btExit_Click"/>
+        <Button Content="Профиль" x:Name="btProfil" HorizontalAlignment="Center" Margin="0,176,0,0" VerticalAlignment="Top" Width="112" Height="41" Click="btProfil_Click"/>
+        <Button Content="Калькулятор" x:Name="calculator" HorizontalAlignment="Center" VerticalAlignment="Top" Width="112" Height="39" Click="calculator_Click" Margin="0,230,0,0"/>
+        <Button Content="История" x:Name="history" Width="112" Margin="44,281,45,114" Click="history_Click" />
+    </Grid>
+</Window>
